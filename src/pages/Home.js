@@ -1,6 +1,7 @@
 import React from "react";
 import Bg from "../images/BG.jpeg";
-import Logo from "../components/header";
+import Logo from "../components/Header";
+import Login from '../components/Formlogin'
 import "../App.css";
 
 const Home = () => {
@@ -16,11 +17,7 @@ const Home = () => {
             corrupti consectetur. Labore minus eos iste, magni aspernatur
             inventore.
           </p>
-          <div className="button">
-            <a href="/" className="button-join">
-              Log In
-            </a>
-          </div>
+          <Login/>
         </div>
         <div
           className="bg"

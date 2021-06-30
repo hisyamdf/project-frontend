@@ -78,6 +78,7 @@
 	align-items: center;
 	text-decoration: none;
 	color: white;
+	margin-top: 15px;
 	padding: 20px;
 	box-sizing: border-box;
 	border: 2px solid rgba(245, 245, 241, 0.2);

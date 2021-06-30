@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../images/logo/Logo.png";
 
-const header = () => {
+const Header = () => {
   return (
     <header className="header">
       <a href="/">
@@ -11,4 +11,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;
