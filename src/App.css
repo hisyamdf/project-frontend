@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-shadow: none;
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+	display: flex;
+	padding: 20px;
+	position: fixed;
+	width: 100vw;
+	z-index: 5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+	width: 100px;
+	height: auto;
+	transition: margin 0.125s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.home {
+	width: 100%;
+  	height: 100vh;
+	position: fixed;
+	background-size: cover;
+	min-height: 600px;
 }
 
-.App-link {
-  color: #61dafb;
+.home .content {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	position: fixed;
+	z-index: 4;
+	width: 500px;
+	right: 10vw;
+	top: 15vw;
+	color: white;
+	max-width: 450px;
+	text-align: right;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home .content h1{
+	  font-size: 50px;
+}
+
+.home .content h2 {
+	margin: 5px 0;
+	font-size: 20px;
+}
+
+.home .content p {
+	width: 100%;
+	font-size: 14px;
+	font-weight: 250;
+	line-height: 1.6;
+	margin-top: 40px;
+}
+
+.home .bg {
+	height: 100vh;
+	position: absolute;
+	z-index: 3;
+	width: 100%;
+}
+
+.home .content .button {
+	display: flex;
+	margin-top: 15px;
+}
+
+.button-join {
+	background: transparent;
+	display: flex;
+	height: 44px;
+	align-items: center;
+	text-decoration: none;
+	color: white;
+	padding: 20px;
+	box-sizing: border-box;
+	border: 2px solid rgba(245, 245, 241, 0.2);
+	border-radius: 20px;
+	font-size: 14px;
+	font-weight: 600;
+	transition: border 0.125s ease, background 0.125s ease;
+}
+
+.button-join:hover {
+	border: 2px solid #f5f5f1;
+}
+
+@media only screen and (max-width: 600px) {
+	.home .content {
+		text-align: center;
+		align-items: center;
+	}
 }
