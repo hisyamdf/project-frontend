@@ -32,11 +32,11 @@ const Formregister = () => {
 
             <Form.Group className="form-floating" id="floatingGender">
               <Form.Control className="field gender" as="select">
-              <option selected disabled>Choose...</option>
+              <option selected disabled>Pilih...</option>
                 <option>Laki-laki</option>
                 <option>Perempuan</option>
               </Form.Control>
-              <label for="floatingGender">Gender</label>
+              <label for="floatingGender">Jenis Kelamin</label>
             </Form.Group>
 
             <Form.Group className="form-floating" id="floatingAddress">
@@ -50,10 +50,10 @@ const Formregister = () => {
             </Form.Group>
           </Form>
           <div className="d-flex justify-content-between">
-          <Link to="/" className="button comeback btn btn-primary">
+          <Link exact to="/" className="button comeback btn btn-primary">
             Kembali
           </Link>
-          <Link to="/landingpage" className="button regisform btn btn-primary">
+          <Link exact to="/landingpage" className="button regisform btn btn-primary">
             Sign up
           </Link>
           </div>

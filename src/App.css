@@ -6,57 +6,15 @@
   text-decoration: none;
 }
 
-.header {
-	display: flex;
-	padding: 20px;
-	position: fixed;
-	width: 100vw;
-	z-index: 3;
-}
-
-.logo {
-	width: 100px;
-	height: auto;
-	transition: margin 0.125s ease;
-}
-
-.home {
-	width: 100%;
-  	height: 100vh;
-	position: fixed;
-	background-size: cover;
-	min-height: 600px;
-}
-
 .home .content {
-	display: flex;
-	flex-direction: column;
+	text-align: right;
 	align-items: flex-end;
-	position: fixed;
-	z-index: 4;
 	width: 500px;
 	right: 10vw;
 	top: 15vw;
 	color: white;
 	max-width: 450px;
-	text-align: right;
-}
-
-.home .content h1{
-	  font-size: 50px;
-}
-
-.home .content h2 {
-	margin: 5px 0;
-	font-size: 20px;
-}
-
-.home .content p {
-	width: 100%;
-	font-size: 14px;
-	font-weight: 250;
-	line-height: 1.6;
-	margin-top: 40px;
+	z-index: 4;
 }
 
 .bg {
@@ -64,11 +22,6 @@
 	position: absolute;
 	z-index: 1;
 	width: 100%;
-}
-
-.home .content .button {
-	display: flex;
-	margin-top: 15px;
 }
 
 .button {
@@ -97,25 +50,7 @@
 	width: 100%;
 	color: black;
 	background: white;
-	justify-content: center;
 	font-size: 20px;
-}
-
-.comeback, .regisform {
-	width: 40%;
-	color: black;
-	background: white;
-	justify-content: center;
-	font-size: 20px;
-}
-
-.login-form, .regis-form {
-	background:rgba(0, 0, 0, 0.85);
-	color: white;
-}
-
-.login-form p {
-	margin-top: 2vh;
 }
 
 .link {
@@ -124,11 +59,6 @@
 
 .link:hover {
 	color: tomato;
-}
-
-.login-title, .regis-title {
-	text-align: center;
-	font-size: 40px;
 }
 
 .field {
@@ -145,19 +75,23 @@
 	color: white;
 }
 
-.form-regis {
-	display: flex;
-	flex-direction: column;
-	position: fixed;
-	z-index: 2;
-	margin-top: 15vh;
+.comeback, .regisform {
+	width: 40%;
+	color: black;
+	background: white;
+	justify-content: center;
+	font-size: 20px;
+}
+
+.login-form, .regis-form {
+	background:rgba(0, 0, 0, 0.85);
 	color: white;
 }
 
-.form-check {
-	margin: 10px 0 0 -10px;
+.login-title, .regis-title {
+	text-align: center;
+	font-size: 40px;
 }
-
 @media only screen and (max-width: 600px) {
 	.home .content {
 		text-align: center;
