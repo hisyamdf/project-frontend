@@ -1,13 +1,11 @@
 import React from "react";
 import Bg from "../images/BG.jpeg";
-import Logo from "../components/Header";
 import Login from '../components/Formlogin'
 import "../App.css";
 
 const Home = () => {
   return (
     <>
-      <Logo />
       <div id="home" className="home">
         <div className="content">
           <h1>Virtual Cinema</h1>

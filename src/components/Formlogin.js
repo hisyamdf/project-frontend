@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from 'react-router-dom'
-
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Formlogin = () => {
   const [show, setShow] = useState(false);
@@ -11,43 +10,43 @@ const Formlogin = () => {
 
   return (
     <>
-      <Button className="button-join" variant="primary" onClick={handleShow}>
-        Log In
+      <Button className="button join" variant="primary" onClick={handleShow}>
+        Sign In
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header>
-          <Modal.Title>Sign In</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
+      <Modal show={show} onHide={handleClose} className="bg-gradient"
+      centered>
+        <Modal.Body className="login-form">
+        <Modal.Title className="login-title">Sign In</Modal.Title>
           <Form>
-            <Form.Group className="form email" controlId="formBasicEmail">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" placeholder="Masukkan Email" />
-              <Form.Text className="text-muted">
+            <Form.Group className="form-floating" id="floatingEmailLogin">
+              <Form.Control className="field email-login" type="email" placeholder="Email"/>
+              <label for="floatingEmailLogin">Email</label>
+            </Form.Group>
+
+            <Form.Text className="text-muted">
                 We'll never share your email with anyone else.
               </Form.Text>
-            </Form.Group>
 
-            <Form.Group className="form pass" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
+            <Form.Group className="form-floating" id="floatingPasswordLogin">
+              <Form.Control className="field pass-login" type="password" placeholder="Password"/>
+              <label for="floatingPasswordLogin">Password</label>
             </Form.Group>
-            <Form.Group controlId="formBasicCheckbox">
+            <Form.Group className="form-check" controlId="formBasicCheckbox">
               <Form.Check type="checkbox" label="Remember Me" />
             </Form.Group>
-
-            <Button variant="primary" onClick={handleClose}>
-              Log In
-            </Button>
           </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          Don't Have An Account?
-          <Link exact to={"/signup"}>
-            Register Now
+
+
+          <Button className="button loginform" variant="primary" onClick={handleClose}>
+              Sign In
+            </Button>
+          <p>Belum Punya Akun? {" "}
+          <Link exact to={"/signup"} className="link">
+            Daftar di sini
           </Link>
-        </Modal.Footer>
+          </p>
+        </Modal.Body>
       </Modal>
     </>
   );
