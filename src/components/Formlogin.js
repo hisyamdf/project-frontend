@@ -32,10 +32,6 @@ const Formlogin = () => {
               <label for="floatingEmailLogin">Email</label>
             </Form.Group>
 
-            <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text>
-
             <Form.Group className="form-floating" id="floatingPasswordLogin">
               <Form.Control
                 className="field pass-login"
@@ -49,13 +45,9 @@ const Formlogin = () => {
             </Form.Group>
           </Form>
 
-          <Button
-            className="button loginform justify-content-center"
-            variant="primary"
-            onClick={handleClose}
-          >
+          <Link exact to="/landingpage" className="button loginform">
             Sign In
-          </Button>
+          </Link>
           <p style={{marginTop: "2vh"}}>
             Belum Punya Akun?{" "}
             <Link exact to={"/signup"} className="link register">

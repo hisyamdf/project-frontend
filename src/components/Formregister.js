@@ -50,10 +50,10 @@ const Formregister = () => {
             </Form.Group>
           </Form>
           <div className="d-flex justify-content-between">
-          <Link exact to="/" className="button comeback btn btn-primary">
+          <Link exact to="/" className="button comeback">
             Kembali
           </Link>
-          <Link exact to="/landingpage" className="button regisform btn btn-primary">
+          <Link exact to="/landingpage" className="button regisform">
             Sign up
           </Link>
           </div>

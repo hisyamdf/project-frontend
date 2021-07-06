@@ -1,10 +1,16 @@
 import React from 'react'
+import joker from '../assets/images/joker.jpg'
 
 const Landingpage = () => {
     return (
-        <div>
-            
-        </div>
+        <header>
+            <div
+          className="bg landing-page"
+          style={{
+            background: `url(${joker}) no-repeat center /cover`,
+          }}
+        />
+        </header>
     )
 }
 

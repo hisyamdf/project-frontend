@@ -7,7 +7,6 @@ const Home = () => {
   return (
     <>
       <div
-        id="home"
         className="home position-fixed"
         style={{
           width: "100%",
