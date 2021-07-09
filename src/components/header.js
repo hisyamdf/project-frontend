@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../assets/logo/Logo.png";
 import { Link } from "react-router-dom";
 import User from "./Userprofile";
 
 const Header = () => {
+  const [navbar, setNavbar] = useState(false);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 60) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeBackground);
+
   return (
     <header
-      className="d-inline-flex position-fixed justify-content-between"
+      className={navbar ? "navbar active" : "navbar"}
       style={{
-        width: "100vw",
-        padding: "20px",
+        width: "100%",
+        padding: "5px 20px",
         zIndex: "3",
         alignItems: "center",
       }}
