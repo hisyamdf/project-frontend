@@ -5,6 +5,15 @@ import User from "./Userprofile";
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
+  const [user, setUser] = useState(true)
+
+  const hideUser = () => {
+    if ( window.location.href !== "/landingpage") {
+      setUser(true);
+    } else {
+      setUser(false);
+    }
+  };
 
   const changeBackground = () => {
     if (window.scrollY >= 60) {
@@ -15,6 +24,7 @@ const Header = () => {
   };
 
   window.addEventListener("scroll", changeBackground);
+  window.addEventListener("location", hideUser)
 
   return (
     <header
@@ -34,7 +44,7 @@ const Header = () => {
           style={{ width: "100px", transition: "margin 0.125s ease" }}
         />
       </Link>
-      <User />
+      <User className={user ? "user hide" : "user"}/>
     </header>
   );
 };
